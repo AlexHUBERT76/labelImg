@@ -42,6 +42,7 @@ class YOLOWriter:
         ######### "WOFGAandAlexHubert76" FIX labeling issue when restarting labeling #######
         box_name = str(box['name'])        
         path = os.path.join(os.path.dirname(self.local_img_path), 'classes.txt')
+        class_list=[]
         with open(path) as f:
             for line in f.readlines():
                 line = str(line.split('\n')[0])
